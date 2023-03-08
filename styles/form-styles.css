@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Colors used throughout the web application and form specific colors */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --coral: #ff784f;
+    --cornflower: #92dce5;
+    --cool-black: #052f5f;
+    
+    /* Form specific colors  */
+    --light-blue-hsl: 200, 100%, 91%;
+    --blue-hsl: 200, 100%, 50%;
+    --dark-blue-hsl: 200, 100%, 6%;
+    --success-hsl: 100, 60%, 50%;
+    --error-hsl: 0, 60%, 50%;
+}
+
+/* Login and Add/Update page specific styling */
+body {
+    background-color: var(--cool-black);
+}
+
+/* Main container sections */
+.main-container {
+    font-size: 2rem;
+    padding: 5% 0%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form container and title*/
+.form-container {
+    color: hsl(var(--dark-blue-hsl), .7);
+    background-color: hsl(var(--dark-blue-hsl), .7);
+    box-shadow: 0 0 1.5rem 0 hsl(var(--dark-blue-hsl), .7);
+    padding: 4rem 3rem;
+    width: 80%;
+    max-width: 100rem;
+    border-radius: 2rem;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 4rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Form, labels, and inputs */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.form-fields label {
+    color: var(--white);
+    font-weight: lighter;
+}
+
+.form-fields input {
+    font-size: 2rem;
+    padding: .8rem;
+    background-color: hsl(var(--light-blue-hsl), .3);
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    color: var(--white);
+    font-weight: lighter;
+}
+
+.form-fields input:focus {
+    box-shadow: 0 0 0 .1rem hsl(var(--blue-hsl));
+}
+
+.form-fields .message {
+    display: none;
+    font-size: 1.2rem;
+}
+
+/* Select and options */
+select {
+    font-size: 2rem;
+    padding: .8rem;
+    background-color: hsl(var(--light-blue-hsl), .3);
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    color: var(--white);
+    font-weight: lighter;
+    width: 100%;
+}
+
+option {
+    /* Not sure how to get options to be styled same background color as select */
+    background-color: var(--black); 
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    width: 100%;
+    /* This is 3 times taller than input fields with  height of 39px (3.9rem) */
+    height: 11.7rem; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+/* Success and error messages can implement with JS later on; attach success or error classes to form-fields inputs in HTML*/
+.form-fields.success input {
+    box-shadow: 0 0 0 .1rem hsl(var(--success-hsl));
+}
+
+.form-fields.error input {
+    box-shadow: 0 0 0 .1rem hsl(var(--error-hsl));
+}
+
+.form-fields.success .message,
+.form-fields.error .message {
+    display: block;
+}
+
+.form-fields.success .message {
+    color: hsl(var(--success-hsl));
+}
+
+.form-fields.error .message {
+    color: hsl(var(--error-hsl));
+}
+
+/* Form button */
+.form-button {
+    padding: .8rem 1.6rem;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    color: var(--white);
+    background-color: hsl(var(--blue-hsl), .25);
+    border: .1rem solid hsl(var(-blue-hsl));
+    border-radius: .4rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-button {
+    border-radius: 20rem;
+}
+
+.form-button:hover,
+.form-button:focus {
+    background-color: var(--coral);
+    border: .25rem solid var(--white);
+}
+
+.form-button:active {
+    background-color: var(--cool-black);
+}

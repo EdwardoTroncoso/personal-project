@@ -3,20 +3,20 @@
 
 <head>
     <!-- 
-        CodeSquad Personal Project Index (Home) Page
+        CodeSquad Personal Project Add/Update Resource Page
         Developer: Edwardo Troncoso-Castro
         Last Updated Date: 2023-03-07
 
-        filename: index.html
+        filename: add-update-resource.html
      -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSCRC | Home</title>
+    <title>NSCRC | Add/Update Resource</title>
 
     <!-- Linking CSS Files -->
     <link rel="stylesheet" type="text/css" href="./styles/general-styles.css">
-    <link rel="stylesheet" type="text/css" href="./styles/index-styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/form-styles.css">
 
     <!-- Linking Google Fonts Roboto Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,31 +53,57 @@
     </header>
 
     <div class="main-container">
+        <div class="form-container">
+            <h1 class="title">Submit New Resource</h1>
 
-        <section class="about">
-            <h1 class="title">North Shore Community <span class="title-split">Resources Connector</span></h1>
+            <form action="#" class="form">
+                <div class="form-fields">
+                    <label for="name">Name of Resource or Organization:</label>
+                    <input type="text" id="name" name="name" placeholder="Mass General Brigham - Salem Hospital">
+                </div>
 
-            <p>The purpose of the North Shore Community Resources Connector (NSCRC) web application is to serve as a central hub of information that can lead to transformative socio-economic change for low-income residents of the North Shore, Massachusetts region.</p>
+                <div class="form-fields">
+                    <label for="address">Address (including ZIP code):</label>
+                    <input type="text" id="address" name="address" placeholder="81 Highland Avenue, Salem, MA 01970">
+                </div>
 
-            <p>This site is aimed at anyone looking for resources such as affordable health care, housing, food insecurity, employment and career services, and physical and mental well-being, among other niche categories.</p>
+                <div class="form-fields">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" placeholder="(978) 741-1200">
+                </div>
 
-            <p>My hope is that this site can serve as a way to more effectively get information about resources available to those who need it but are often unaware of what is available to them. Together, we can gradually reduce socioeconomic disparities and inequity in this region.</p>
-        </section>
+                <div class="form-fields">
+                    <label for="website">Website URL:</label>
+                    <input type="text" id="website" name="website" placeholder="https://salem.massgeneralbrigham.org/">
+                </div>
 
-        <section class="fx-bg-img">
-            <h2 class="fx-bg-img-text">"Alone we can do so little; together we can do so much."</h2>
-            <p class="fx-bg-img-text">- Helen Keller</>
-        </section>
+                <div class="form-fields">
+                    <label for="category">Resource Category:</label>
+                    <select id="category" name="category">
+                        <option value="Health Care">Health Care</option>
+                        <option value="Housing">Housing</option>
+                        <option value="Food Insecurity">Food Insecurity</option>
+                        <option value="Employment and Career Services">Employment/Career</option>
+                        <option value="Physical Health">Physical Health</option>
+                        <option value="Mental Health">Mental Health</option>
+                        <option value="Other">Other</option>
+                        <option value="Select" selected disabled>Select</option>
+                    </select>
+                </div>
+                
+                <div class="form-fields">
+                    <label for="errors">Brief Description (Including Hours of Operation):</label>
+                    <textarea id="description" name="description"></textarea>
+                </div>
 
-        <section class="main">
-            <h2>&#8618 Free to low-cost community resources near you</h2>
+                <div class="form-fields">
+                    <label for="errors">Report Errors or Changes to Information:</label>
+                    <textarea id="errors" name="errors"></textarea>
+                </div>
 
-            <h2>&#8618 Community-driven, suggest resource and expand our network</h2>
-
-            <section class="resources-link">
-                <a href="./resources.html">See Resources</a>
-            </section>
-        </section>
+                <button type="submit" class="form-button">Submit</button>
+            </form>
+        </div>
     </div>
 
     <footer class="footer-container">

@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Colors used throughout the web application */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --coral: #ff784f;
+    --cornflower: #92dce5;
+    --cool-black: #052f5f;
+}
+
+/* Index page specific main container styling */
+
+/* Main container */
+.main-container {
+    font-size: 2rem;
+}
+
+/* Title */
+.title {
+    font-size: 3.75rem;
+    color: var(--cool-black);
+    text-align: center;
+    margin: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+/* When screen size falls at or below 926px display span in title on its own line */
+@media screen and (max-width: 926px) {
+    .title-split {
+        display: block;
+    }    
+}
+
+/* About section */
+.about {
+    background-color: var(--white);
+    padding: 3%;
+}
+
+/* Fixed background img and overlaying text */
+.fx-bg-img {
+    background-image: url(../images/hands-cropped.jpg);
+    max-width: 100%;
+    height: 59vh;
+    margin: auto;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 90%;
+    
+}
+
+.fx-bg-img-text {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Main section (includes link to resources page) */
+.main {
+    background-color: var(--cool-black);
+    color: var(--white);
+    padding: 3%;
+    padding-bottom: 5rem;
+}
+
+.main h2 {
+    text-align: center;
+}
+
+/* Resources link */
+.resources-link {
+    width: 20rem;
+    margin: auto;
+    background-color: var(--cornflower);
+}
+
+.resources-link a {
+    display: block;
+    text-align: center;
+    padding: .2rem;
+}
+
+/* Resources link states (LVHA) */
+.resources-link a:link {
+    color: var(--cool-black);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+.resources-link a:visited {
+    color: var(--cool-black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.resources-link a:hover {
+    font-weight: bolder;
+    border: .25rem solid var(--white);
+}
+
+.resources-link a:active {
+    color: var(--white);
+    font-weight: bolder;
+    background-color: var(--coral);
+}
